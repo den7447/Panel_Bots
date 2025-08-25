@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Режим восстановления</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #d9534f;
+        }
+        .message {
+            margin-bottom: 20px;
+        }
+        .backup-list {
+            list-style: none;
+            padding: 0;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .backup-list li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .backup-list li:last-child {
+            border-bottom: none;
+        }
+        .backup-list li:hover {
+            background-color: #f8f8f8;
+        }
+        .restore-btn {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .restore-btn:hover {
+            background-color: #4cae4c;
+        }
+        .restore-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Режим восстановления</h1>
+        <div class="message">
+            <p>Обнаружена серьезная ошибка. Вероятно, последние изменения привели к сбою. Вы можете восстановить сайт из резервной копии.</p>
+        </div>
+        <p>Выберите бэкап для восстановления:</p>
+        <ul id="backups-list" class="backup-list">
+            {% for backup in backups %}
+            <li data-backup-name="{{ backup }}">{{ backup }}</li>
+            {% endfor %}
+        </ul>
+        <button id="restore-btn" class="restore-btn" disabled>Восстановить сайт</button>
+        <p id="status-message" style="color: red;"></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backupList = document.getElementById('backups-list');
+            const restoreBtn = document.getElementById('restore-btn');
+            const statusMessage = document.getElementById('status-message');
+            let selectedBackup = null;
+
+            backupList.addEventListener('click', function(event) {
+                const target = event.target;
+                if (target.tagName === 'LI') {
+                    // Снимаем выделение со всех элементов
+                    Array.from(backupList.children).forEach(li => li.style.backgroundColor = '');
+                    
+                    // Выделяем выбранный
+                    target.style.backgroundColor = '#e6e6e6';
+                    selectedBackup = target.dataset.backupName;
+                    restoreBtn.disabled = false;
+                }
+            });
+
+            restoreBtn.addEventListener('click', async function() {
+                if (!selectedBackup) {
+                    statusMessage.textContent = 'Пожалуйста, выберите бэкап.';
+                    return;
+                }
+
+                statusMessage.textContent = 'Восстановление...';
+                restoreBtn.disabled = true;
+
+                try {
+                    const response = await fetch('/recovery_mode', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ backup_name: selectedBackup })
+                    });
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        statusMessage.textContent = data.message;
+                        statusMessage.style.color = 'green';
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 2000);
+                    } else {
+                        statusMessage.textContent = data.message;
+                        statusMessage.style.color = 'red';
+                        restoreBtn.disabled = false;
+                    }
+                } catch (error) {
+                    statusMessage.textContent = 'Ошибка при восстановлении. Пожалуйста, попробуйте снова.';
+                    statusMessage.style.color = 'red';
+                    restoreBtn.disabled = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

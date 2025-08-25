@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управления ботами</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Панель управления ботами</h1>
+        <div class="user-info">
+            Привет, <span id="username-display">{{ username }}</span>! (<span id="user-rank">{{ user_rank }}</span>)
+            <button id="logout-btn">Выйти</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'bot-management')">Управление ботами</button>
+            {% if user_rank == 'tech_admin' %}
+            <button class="tab-button" onclick="openTab(event, 'file-manager')">Файловый менеджер</button>
+            <button class="tab-button" onclick="openTab(event, 'backups')">Бэкапы</button>
+            {% endif %}
+            {% if user_rank == 'tech_admin' or user_rank == 'owner' %}
+            <button class="tab-button" onclick="openTab(event, 'admins-tab')">Администрирование</button>
+            <button class="tab-button" onclick="openTab(event, 'logs-tab')">Логи</button>
+            {% endif %}
+            {% if user_rank == 'tech_admin' or user_rank == 'admin' or user_rank == 'owner' %}
+            <button class="tab-button" onclick="openTab(event, 'admin-chat')">Чат администрации</button>
+            {% endif %}
+        </nav>
+
+        <div id="bot-management" class="tab-content active">
+            <h2>Список ботов</h2>
+            <div id="bot-list" class="bot-list">
+                </div>
+            {% if user_rank == 'tech_admin' %}
+            <div class="add-bot-section">
+                <h3>Добавить нового бота</h3>
+                <input type="text" id="new-bot-name" placeholder="Имя нового бота" required>
+                <button onclick="addBot()">Создать</button>
+            </div>
+            {% endif %}
+        </div>
+
+        {% if user_rank == 'tech_admin' %}
+        <div id="file-manager" class="tab-content">
+            <h2>Файловый менеджер</h2>
+            <div class="path-nav">
+                <span id="current-path">/</span>
+                <button onclick="goBack()">Назад</button>
+            </div>
+            <div class="file-list-container">
+                <ul id="file-list" class="file-list">
+                    </ul>
+            </div>
+            <div class="file-editor">
+                <h3>Редактор файла: <span id="current-file-name"></span></h3>
+                <textarea id="file-content-editor"></textarea>
+                <div class="file-editor-actions">
+                    <button onclick="saveFileToBuffer()">Сохранить в буфер</button>
+                    <button onclick="applyChanges()" class="apply-btn">Применить изменения</button>
+                </div>
+            </div>
+            <div class="modified-files-list">
+                <h4>Измененные файлы в буфере:</h4>
+                <ul id="modified-files-list">
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if user_rank == 'tech_admin' %}
+        <div id="backups" class="tab-content">
+            <h2>Резервные копии</h2>
+            <div class="backup-actions">
+                <button onclick="createManualBackup()">Создать бэкап</button>
+            </div>
+            <div class="backup-list-container">
+                <h3>Список бэкапов:</h3>
+                <ul id="backups-list">
+                    </ul>
+            </div>
+        </div>
+        {% endif %}
+        
+        {% if user_rank == 'tech_admin' or user_rank == 'owner' %}
+        <div id="admins-tab" class="tab-content">
+            <h2>Администрирование</h2>
+            <div class="admin-section">
+                <h3>Список администраторов</h3>
+                <table id="all-admins-table">
+                    <thead>
+                        <tr>
+                            <th>Имя</th>
+                            <th>Ранг</th>
+                            <th>Статус</th>
+                            <th>IP-адрес</th>
+                            <th>Последняя активность</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+                <button onclick="loadAllAdmins()">Обновить список</button>
+            </div>
+            <div class="admin-section">
+                <h3>Управление пользователями</h3>
+                <form id="add-user-form">
+                    <input type="text" id="new-user-name" placeholder="Имя пользователя" required>
+                    <input type="password" id="new-user-password" placeholder="Пароль" required>
+                    <select id="new-user-rank">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                        {% if user_rank == 'tech_admin' %}
+                        <option value="owner">Owner</option>
+                        {% endif %}
+                        <option value="tech_admin">Tech Admin</option>
+                    </select>
+                    <button type="submit">Добавить пользователя</button>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if user_rank == 'tech_admin' or user_rank == 'owner' %}
+        <div id="logs-tab" class="tab-content">
+            <h2>Логи</h2>
+            <div class="logs-container">
+                <div class="log-selection">
+                    <button onclick="showUserLogsSelection()">Логи админов</button>
+                    <button onclick="showBotLogsSelection()">Логи ботов</button>
+                </div>
+                <div id="log-list-container">
+                    </div>
+            </div>
+            <div id="log-content-container">
+                </div>
+        </div>
+        {% endif %}
+
+        {% if user_rank == 'tech_admin' or user_rank == 'admin' or user_rank == 'owner' %}
+        <div id="admin-chat" class="tab-content">
+            <h2>Чат администрации</h2>
+            <div id="chat-messages" class="chat-messages">
+                </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Введите сообщение...">
+                <button id="send-chat-btn">Отправить</button>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    
+    <div id="console-container" class="hidden">
+        <h3>Консоль бота: <span id="console-bot-name"></span></h3>
+        <div id="console-output" class="console-output"></div>
+        <div id="console-input-area">
+            </div>
+        <button onclick="closeConsole()">Закрыть консоль</button>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

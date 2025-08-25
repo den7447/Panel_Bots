@@ -1,0 +1,398 @@
+{
+    "den7447": [
+        {
+            "timestamp": "2025-08-24T23:25:17.510647",
+            "action": "view_bot_console",
+            "details": "Просмотр консоли бота: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:25:27.255049",
+            "action": "send_command",
+            "details": "Отправка команды 'help' боту: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:26:41.752066",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:26:41.775700",
+            "action": "view_file_list",
+            "details": "Просмотр файлов в папке: C:\\Users\\hiijo\\OneDrive\\Desktop\\Panel_Bots\\bots",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:26:44.342041",
+            "action": "logout",
+            "details": "Вышел из системы.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:31:53.683082",
+            "action": "login",
+            "details": "Успешный вход в систему.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:31:53.761058",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:31:56.458955",
+            "action": "view_bot_console",
+            "details": "Просмотр консоли бота: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:31:59.090449",
+            "action": "view_bot_console",
+            "details": "Просмотр консоли бота: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:32:02.862234",
+            "action": "view_bot_console",
+            "details": "Просмотр консоли бота: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:32:09.087344",
+            "action": "send_command",
+            "details": "Отправка команды 'help' боту: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:46:40.326126",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:47:18.563597",
+            "action": "logout",
+            "details": "Вышел из системы.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:47:42.539236",
+            "action": "login",
+            "details": "Успешный вход в систему.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:47:42.673713",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:48:13.841610",
+            "action": "run_bot",
+            "details": "Запустил бота: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:48:15.564750",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:48:17.073964",
+            "action": "view_bot_console",
+            "details": "Просмотр консоли бота: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:57:17.241425",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:57:23.235317",
+            "action": "run_bot",
+            "details": "Запустил бота: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:57:25.217556",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:58:09.091066",
+            "action": "add_user",
+            "details": "Добавил нового пользователя: Nexor с рангом owner",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:58:34.848690",
+            "action": "logout",
+            "details": "Вышел из системы.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:08:18.162416",
+            "action": "login",
+            "details": "Успешный вход в систему.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:08:18.298477",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:08:23.216976",
+            "action": "view_file_list",
+            "details": "Просмотр файлов в папке: C:\\Users\\hiijo\\OneDrive\\Desktop\\Panel_Bots\\bots",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:08:37.943369",
+            "action": "delete_user",
+            "details": "Удалил пользователя: test_admin",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:08:44.934738",
+            "action": "delete_user",
+            "details": "Удалил пользователя: veri0086",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:09:01.545040",
+            "action": "add_user",
+            "details": "Добавил нового пользователя: Test с рангом user",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:09:06.847922",
+            "action": "logout",
+            "details": "Вышел из системы.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:09:50.700956",
+            "action": "login",
+            "details": "Успешный вход в систему.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:09:50.837449",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:19:50.332765",
+            "action": "view_file_list",
+            "details": "Просмотр файлов в папке: C:\\Users\\hiijo\\OneDrive\\Desktop\\Panel_Bots",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:23:05.156567",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:23:08.324493",
+            "action": "run_bot",
+            "details": "Запустил бота: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:23:09.914693",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:24:39.666377",
+            "action": "view_file_list",
+            "details": "Просмотр файлов в папке: C:\\Users\\hiijo\\OneDrive\\Desktop\\Panel_Bots",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:26:03.308823",
+            "action": "view_file_list",
+            "details": "Просмотр файлов в папке: C:\\Users\\hiijo\\OneDrive\\Desktop\\Panel_Bots",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:26:27.294465",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:26:29.857445",
+            "action": "view_bot_console",
+            "details": "Просмотр консоли бота: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:26:48.605956",
+            "action": "delete_user",
+            "details": "Удалил пользователя: Test",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:27:21.411995",
+            "action": "add_user",
+            "details": "Добавил нового пользователя: im_ARMANE с рангом admin",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:33:05.443181",
+            "action": "view_bot_console",
+            "details": "Просмотр консоли бота: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:33:13.731227",
+            "action": "send_command",
+            "details": "Отправка команды 'help' боту: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:33:41.889642",
+            "action": "view_file_list",
+            "details": "Просмотр файлов в папке: C:\\Users\\hiijo\\OneDrive\\Desktop\\Panel_Bots",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T12:08:39.525875",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T12:08:56.064471",
+            "action": "logout",
+            "details": "Вышел из системы.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T12:09:22.034803",
+            "action": "login",
+            "details": "Успешный вход в систему.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T12:09:22.190164",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T13:38:39.315564",
+            "action": "login",
+            "details": "Успешный вход в систему.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T13:38:39.447202",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T14:04:34.321451",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T15:11:54.831877",
+            "action": "view_file_list",
+            "details": "Просмотр файлов в папке: C:\\Users\\hiijo\\OneDrive\\Desktop\\Panel_Bots",
+            "ip_address": "10.149.208.20"
+        }
+    ],
+    "Nexor": [
+        {
+            "timestamp": "2025-08-24T23:58:38.498341",
+            "action": "login",
+            "details": "Успешный вход в систему.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:58:38.629136",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:58:41.482483",
+            "action": "view_bot_console",
+            "details": "Просмотр консоли бота: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:58:47.972254",
+            "action": "send_command",
+            "details": "Отправка команды 'help' боту: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-24T23:59:23.245441",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:07:47.710615",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:08:11.226325",
+            "action": "run_bot",
+            "details": "Запустил бота: DICKY_PON",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:08:12.798590",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T00:08:14.923315",
+            "action": "logout",
+            "details": "Вышел из системы.",
+            "ip_address": "10.149.208.20"
+        }
+    ],
+    "im_ARMANE": [
+        {
+            "timestamp": "2025-08-25T12:09:04.317189",
+            "action": "login",
+            "details": "Успешный вход в систему.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T12:09:04.449598",
+            "action": "view_bot_list",
+            "details": "Просмотр списка ботов.",
+            "ip_address": "10.149.208.20"
+        },
+        {
+            "timestamp": "2025-08-25T12:09:17.874649",
+            "action": "logout",
+            "details": "Вышел из системы.",
+            "ip_address": "10.149.208.20"
+        }
+    ]
+}

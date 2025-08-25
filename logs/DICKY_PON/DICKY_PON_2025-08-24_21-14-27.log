@@ -1,0 +1,13 @@
+Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "C:\Users\hiijo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\discord\client.py", line 412, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\hiijo\OneDrive\Desktop\Panel_Bots\bots\DICKY_PON\main.py", line 1452, in on_ready
+    load_users() # ��������� ������ ������������� ��� �������
+    ^^^^^^^^^^^^
+  File "C:\Users\hiijo\OneDrive\Desktop\Panel_Bots\bots\DICKY_PON\main.py", line 75, in load_users
+    update_sensitive_data_cache()
+  File "C:\Users\hiijo\OneDrive\Desktop\Panel_Bots\bots\DICKY_PON\main.py", line 98, in update_sensitive_data_cache
+    sensitive_data[user_data['server_nick'].lower()] = user_id
+                   ~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'server_nick'

@@ -1,0 +1,20 @@
+{
+    "den7447": {
+        "password": "8771323",
+        "rank": "tech_admin",
+        "last_active": "2025-08-25T00:09:50.849348",
+        "ip_address": "10.149.208.20"
+    },
+    "Nexor": {
+        "password": "1wertyu8",
+        "rank": "owner",
+        "last_active": "2025-08-25T00:08:14.908127",
+        "ip_address": "10.149.208.20"
+    },
+    "Test": {
+        "password": "Test",
+        "rank": "user",
+        "last_active": "2025-08-25T00:09:46.209265",
+        "ip_address": "10.149.208.20"
+    }
+}

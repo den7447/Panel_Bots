@@ -1,0 +1,31 @@
+Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "C:\Users\hiijo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\discord\client.py", line 412, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\hiijo\OneDrive\Desktop\Panel_Bots\bots\DICKY_PON\main.py", line 1452, in on_ready
+    load_users() # ��������� ������ ������������� ��� �������
+    ^^^^^^^^^^^^
+  File "C:\Users\hiijo\OneDrive\Desktop\Panel_Bots\bots\DICKY_PON\main.py", line 75, in load_users
+    update_sensitive_data_cache()
+  File "C:\Users\hiijo\OneDrive\Desktop\Panel_Bots\bots\DICKY_PON\main.py", line 98, in update_sensitive_data_cache
+    sensitive_data[user_data['server_nick'].lower()] = user_id
+                   ~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'server_nick'
+Ignoring exception in on_message
+Traceback (most recent call last):
+  File "C:\Users\hiijo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\discord\client.py", line 412, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\hiijo\OneDrive\Desktop\Panel_Bots\bots\DICKY_PON\main.py", line 1231, in on_message
+    await message.author.send("��� ������� ���������� � �� ��� �� ����������. ��� ���������� ��������� ������� � ��������� `Sudo Hack`.")
+  File "C:\Users\hiijo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\discord\abc.py", line 1548, in send
+    channel = await self._get_channel()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hiijo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\discord\user.py", line 572, in _get_channel
+    ch = await self.create_dm()
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hiijo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\discord\user.py", line 616, in create_dm
+    data: DMChannelPayload = await state.http.start_private_message(self.id)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hiijo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\discord\http.py", line 374, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50007): Cannot send messages to this user

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudo-Bot Control Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Здесь могут быть дополнительные стили */
+        .box {
+            background-color: #23272a;
+            color: #ffffff;
+            border-radius: 8px;
+        }
+        .input, .textarea, .button {
+            border-radius: 4px;
+        }
+        .hero {
+            background: #23272a;
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero is-fullheight" id="login-page">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-4 is-offset-4">
+                <div class="box">
+                    <h3 class="title">Sudo-Bot Login</h3>
+                    <p class="subtitle has-text-white">Пожалуйста, войдите в систему.</p>
+                    <form id="login-form">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="text" id="username" placeholder="Имя пользователя" autofocus="">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="password" id="password" placeholder="Пароль">
+                            </div>
+                        </div>
+                        <button class="button is-block is-primary is-large is-fullwidth" type="submit">Войти <i class="fa-solid fa-right-to-bracket"></i></button>
+                    </form>
+                    <p id="login-message" class="has-text-danger"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="main-app" style="display: none;">
+    </div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

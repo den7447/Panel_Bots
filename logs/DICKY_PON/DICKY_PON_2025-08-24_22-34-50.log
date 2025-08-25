@@ -1,0 +1,80 @@
+Бот готов и вошел как Dickyu PON#0170
+Управление: теперь все команды доступны и в консоли, и в чате.
+Консоль: используй "help" для списка команд, включая "mimic <ID>" и "exit".
+Чат: используйте префикс "Sudo Hack <команда>".
+Консоль: Вводи команды. Используй 'help' для списка команд.
+Ignoring exception in on_message
+Traceback (most recent call last):
+File "C:\Users\hiijo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\discord\client.py", line 412, in _run_event
+await coro(*args, **kwargs)
+File "C:\Users\hiijo\OneDrive\Desktop\Panel_Bots\bots\DICKY_PON\main.py", line 1231, in on_message
+await message.author.send("Эта команда недоступна в ЛС или не существует. Для управления используй команды с префиксом `Sudo Hack`.")
+File "C:\Users\hiijo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\discord\abc.py", line 1548, in send
+channel = await self._get_channel()
+^^^^^^^^^^^^^^^^^^^^^^^^^
+File "C:\Users\hiijo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\discord\user.py", line 572, in _get_channel
+ch = await self.create_dm()
+^^^^^^^^^^^^^^^^^^^^^^
+File "C:\Users\hiijo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\discord\user.py", line 616, in create_dm
+data: DMChannelPayload = await state.http.start_private_message(self.id)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "C:\Users\hiijo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\discord\http.py", line 374, in request
+raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50007): Cannot send messages to this user
+
+Доступные команды в консоли:
+- whois <ID> <пароль> (отправляет отчёт в ЛС)
+- change_nick <ID пользователя> <новый ник>
+- - change_all_nicks <новый ник>
+- send_message <#канал или ID> <сообщение>
+- add_role <ID пользователя> <ID роли>
+- remove_role <ID пользователя> <ID роли> (убрать роль)
+- spam <#канал или ID> <количество> <сообщение>
+- clear <#канал или ID> <кол-во> (очистка чата)
+- clear_user <#канал или ID> <ID пользователя> <кол-во> (очистка сообщений конкретного пользователя)
+- mimic <ID пользователя> (включает маскировку)
+- mimic_off (отключает маскировку)
+- move_to <ID пользователя> <#канал или ID>
+- move_all_to <#канал или ID>
+- lockdown <#канал или ID>
+- lockdown_off <#канал или ID>
+- change_topic <#канал или ID> <новая_тема>
+- schedule_spam <#канал или ID> <кол-во> <сообщение> <секунды задержки>
+- show_logs [<номер>] (показать список логов или содержимое выбранного)
+- auto_role <ID роли> <T/F> (вкл/выкл автовыдачу роли и оповещение об инвайте)
+- extreg (включить режим экстренной регистрации)
+- extreg_off (отключить режим экстренной регистрации)
+- exit (выключает бота)
+
+- Reset_pass <новый_пароль> <подтверждение> (работает ТОЛЬКО в ЛС с ботом)
+
+Доступные команды в консоли:
+- whois <ID> <пароль> (отправляет отчёт в ЛС)
+- change_nick <ID пользователя> <новый ник>
+- - change_all_nicks <новый ник>
+- send_message <#канал или ID> <сообщение>
+- add_role <ID пользователя> <ID роли>
+- remove_role <ID пользователя> <ID роли> (убрать роль)
+- spam <#канал или ID> <количество> <сообщение>
+- clear <#канал или ID> <кол-во> (очистка чата)
+- clear_user <#канал или ID> <ID пользователя> <кол-во> (очистка сообщений конкретного пользователя)
+- mimic <ID пользователя> (включает маскировку)
+- mimic_off (отключает маскировку)
+- move_to <ID пользователя> <#канал или ID>
+- move_all_to <#канал или ID>
+- lockdown <#канал или ID>
+- lockdown_off <#канал или ID>
+- change_topic <#канал или ID> <новая_тема>
+- schedule_spam <#канал или ID> <кол-во> <сообщение> <секунды задержки>
+- show_logs [<номер>] (показать список логов или содержимое выбранного)
+- auto_role <ID роли> <T/F> (вкл/выкл автовыдачу роли и оповещение об инвайте)
+- extreg (включить режим экстренной регистрации)
+- extreg_off (отключить режим экстренной регистрации)
+- exit (выключает бота)
+
+- Reset_pass <новый_пароль> <подтверждение> (работает ТОЛЬКО в ЛС с ботом)
+Бот готов и вошел как Dickyu PON#0170
+Управление: теперь все команды доступны и в консоли, и в чате.
+Консоль: используй "help" для списка команд, включая "mimic <ID>" и "exit".
+Чат: используйте префикс "Sudo Hack <команда>".
+Консоль: Вводи команды. Используй 'help' для списка команд.
